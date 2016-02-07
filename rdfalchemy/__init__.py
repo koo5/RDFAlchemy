@@ -9,7 +9,7 @@ from rdfalchemy.descriptors import (
     rdfContainer,
     owlTransitive
 )
-from engine import (
+from rdfalchemy.engine import (
     create_engine,
     engine_from_config
 )

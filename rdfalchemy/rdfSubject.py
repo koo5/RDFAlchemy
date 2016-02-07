@@ -122,7 +122,7 @@ class rdfSubject(object):
             raise ValueError(
                 "get_by wanted exactly 1 but got  %i args\n" +
                 "Maybe you wanted filter_by" % (len(kwargs)))
-        key, value = kwargs.items()[0]
+        key, value = list(kwargs.keys())[0], list(kwargs.values())[0]
         if isinstance(value, (URIRef, BNode, Literal)):
             o = value
         else:
@@ -328,8 +328,8 @@ class rdfSubject(object):
         returning all predicate object pairs with qnames"""
         db = db or self.db
         for p, o in db.predicate_objects(self.resUri):
-            print "%20s = %s" % (db.qname(p), str(o))
-        print " "
+            print ("%20s = %s" % (db.qname(p), str(o)))
+        print (" ")
 
     def md5_term_hash(self):
         """Not sure what good this method is but it's defined for

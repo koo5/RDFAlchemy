@@ -5,6 +5,9 @@ Literal.py
 Created by Philip Cooper on 2008-02-09.
 Copyright (c) 2008 Openvest. All rights reserved.
 """
+
+unicode = str
+
 from rdflib import (
     Namespace,
     Literal

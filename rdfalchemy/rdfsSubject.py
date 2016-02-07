@@ -21,12 +21,12 @@ from rdfalchemy import (
 )
 from rdflib.py3compat import PY3
 from rdflib.term import Identifier
-from descriptors import (
+from rdfalchemy.descriptors import (
     rdfSingle,
     rdfMultiple,
     owlTransitive
 )
-from orm import mapper, allsub
+from rdfalchemy.orm import mapper, allsub
 
 import logging
 log = logging.getLogger(__name__)
